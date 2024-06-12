@@ -26,4 +26,5 @@ Create a webpage that allows a user to reverse a string by entering the desired 
 ### Separation of Concerns
 
 1. Separate the JavaScript into a separate file.
-   2.Create a prompt.md file with the instructions I provided, making them readable in code format and in English.
+2. Add documentation to the created JS functions.
+3. Create a prompt.md file with the instructions I provided, making them readable in code format and in English.
