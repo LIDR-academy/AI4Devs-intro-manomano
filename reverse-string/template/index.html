@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,62 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: left;
             margin: 50px;
-            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button.reverse {
+            background-color: blue;
+        }
+        button.copy {
+            background-color: grey;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        button i {
+            margin-left: 5px;
         }
         #result {
             margin-top: 20px;
-        }
-        button {
-            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-<h1>Reverse String</h1>
-<input type="text" id="inputString" placeholder="Introduce una cadena de texto">
-<button onclick="reverseString()">Reverse</button>
-<div id="result"></div>
-<button onclick="copyToClipboard()">Copy to Clipboard</button>
-<script src="script.js"></script>
+    <h1>Reverse String</h1>
+    <input type="text" id="inputString" placeholder="Hello, welcome to AI4Devs!">
+    <br>
+    <button class="reverse" onclick="reverseString()">
+        Reverse <i class="fas fa-exchange-alt"></i>
+    </button>
+    <div id="result"></div>
+    <br>
+    <button class="copy" id="copyButton" style="display:none;" onclick="copyToClipboard()">
+        Copy to Clipboard <i class="fas fa-clipboard"></i>
+    </button>
+    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,12 +1,7 @@
+Put yourself in the shoes of an expert front-end developer: I want you to develop a web page in HTML and JavaScript that has the functionality to reverse a string. The title of the page and the header should be 'Reverse String'. Below, there should be a form field with a placeholder that says 'Hello, welcome to AI4Devs!'. Just below it, there should be a button that executes the function to reverse the string, with the label 'Reverse', a blue background, white text, and an icon representing that action. When the button is pressed, the reversed text should appear on the screen just below it, along with another button to copy the text to the clipboard.
 
-# Prompts
+I want the javasript in another file, called script.js
 
-Se usó GPT-4o para generar los siguientes prompts.
+I want to be left-alligned and the button of copy in grey background. Can you add icons to the buttons please?
 
-## Prompt 1
-
-Indica el código necesario para crear una web con lógica en javascript que invierta el orden de una cadena de texto. Por ejemplo, si introduzco "Raúl" debería devolver "lúaR". Debería tener de título "Reverse String", un campo de texto para introducir la cadena de texto y un botón "Reverse" para ejecutar. El resultado se mostrará debajo del botón "Reverse" y por último habrá un botón para copiar la cadena de texto al portapapeles.
-
-## Prompt 2
-
-Repiteme lo anterior pero sacando el script a un archivo script.js
+Can you put the icons to the right?

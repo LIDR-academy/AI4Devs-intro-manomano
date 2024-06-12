@@ -1,18 +1,13 @@
 function reverseString() {
-    const inputString = document.getElementById("inputString").value;
-    const reversedString = inputString.split('').reverse().join('');
-    document.getElementById("result").innerText = reversedString;
+    const input = document.getElementById('inputString').value;
+    const reversed = input.split('').reverse().join('');
+    document.getElementById('result').innerText = reversed;
+    document.getElementById('copyButton').style.display = 'inline-block';
 }
 
 function copyToClipboard() {
-    const resultDiv = document.getElementById("result");
-    if (resultDiv.innerText) {
-        navigator.clipboard.writeText(resultDiv.innerText).then(() => {
-            alert("Texto copiado al portapapeles");
-        }).catch(err => {
-            console.error("Error al copiar el texto: ", err);
-        });
-    } else {
-        alert("No hay texto para copiar");
-    }
+    const textToCopy = document.getElementById('result').innerText;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Text copied to clipboard');
+    });
 }
