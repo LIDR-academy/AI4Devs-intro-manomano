@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversor de texto</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">Inversor de texto</h1>
+        <div class="flex mb-4">
+            <input id="textInput" type="text" placeholder="Introduce un texto" class="flex-grow p-2 border border-gray-300 rounded-l-md">
+            <button onclick="invertText()" class="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-700">Invertir</button>
+        </div>
+        <div id="result" class="text-xl font-semibold"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
