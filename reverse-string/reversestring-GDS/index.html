@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir Palabra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Invertir Palabra</h1>
+        <input type="text" id="wordInput" placeholder="Ingresa una palabra">
+        <br>
+        <button onclick="reverseWord()">Reverse</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function reverseWord() {
+            const input = document.getElementById('wordInput').value;
+            const reversed = input.split('').reverse().join('');
+            document.getElementById('result').innerText = reversed;
+        }
+    </script>
+</body>
+</html>
