@@ -1,0 +1,3 @@
+
+Lee e interpreta el siguiente readme.md: https://github.com/LIDR-academy/AI4Devs-intro/blob/main/reverse-string/README.md
+A partir de lo interpretado, indicarme los pasos para completar el requerimiento descrito en el readme. Adicionalmente, indícame los comandos para realizar la clonación del repositorio, genera el código necesario para cumplir con el requerimiento (html y javascript respectivamente) y finalmente, entrégame los comandos para realizar un pull request

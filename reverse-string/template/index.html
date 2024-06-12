@@ -1,68 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: left;
-            margin: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        button.reverse {
-            background-color: blue;
-        }
-        button.copy {
-            background-color: grey;
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        button i {
-            margin-left: 5px;
-        }
-        #result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Inversor de Texto</title>
+    <!-- Incluir Tailwind CSS desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Reverse String</h1>
-    <input type="text" id="inputString" placeholder="Hello, welcome to AI4Devs!">
-    <br>
-    <button class="reverse" onclick="reverseString()">
-        Reverse <i class="fas fa-exchange-alt"></i>
-    </button>
-    <div id="result"></div>
-    <br>
-    <button class="copy" id="copyButton" style="display:none;" onclick="copyToClipboard()">
-        Copy to Clipboard <i class="fas fa-clipboard"></i>
-    </button>
-    
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="text-center">
+        <h1 class="mb-4 text-2xl font-bold text-gray-800">Inversor de Texto</h1>
+        <input type="text" id="inputText" placeholder="Introduce un texto"
+               class="border-2 border-gray-300 p-2 rounded-md focus:outline-none focus:border-blue-500">
+        <button onclick="invertirTexto()" class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Invertir
+        </button>
+        <p class="mt-4">Texto invertido: <span id="textoInvertido" class="text-green-500"></span></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
