@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>
+    <title>Invertir Cadena de Texto</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>¡Invierte tu texto aquí!</h1>
-    <input type="text" id="texto-original" placeholder="Ingresa tu texto">
-    <button onclick="invertirTexto()">Invertir</button>
-    <p id="texto-invertido"></p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center">Invertir Cadena de Texto</h2>
+            <form id="invertForm">
+                <div class="form-group">
+                    <label for="inputText">Introduce una cadena de texto:</label>
+                    <input type="text" class="form-control" id="inputText" placeholder="Escribe aquí">
+                </div>
+                <button type="button" class="btn btn-primary" id="submitButton">Enviar</button>
+            </form>
+            <div class="mt-3">
+                <h4>Resultado:</h4>
+                <p id="resultText"></p>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
