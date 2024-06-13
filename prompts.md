@@ -1,16 +1,13 @@
-Se hizo mediante Google - Gemini
+Eres el un experto programador y tienes experiencia en Javascript y HTML.
 
-Formato Prompt: (Caracterización. Prompt. Input. Output.)
+Necesito una pantalla maquetada en Bootstrap.
 
-Eres el mejor programador del mundo de lenguaje javascript. En el seed `index.html` y `script.js` que proporciono crea una página web con lógica en javascript que invierta el orden de una cadena de texto. Sigue la siguiente estructura html: <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>    
-</head>
-<body>
-<script src="script.js"></script>
-</body>
-</html>.
-Dame el resultado en un archivo .html y otro .js.
+Esta pantalla debe contener un campo de texto que permita al usuario introducir una cadena de texto. Seguidamente un botón que ponga enviar.
+
+Al pulsar el botón enviar
+
+Debe coger la cadena de texto introducida en el campo de texto, y se invierta. Para finalmente mostrar el  debajo del campo de texto.
+
+Por ejemplo, si el usuario introduce AI4Devs el resultado sería sveD4IA.
+
+Finalmente guarda el codigo html y js generado en ficheros.
