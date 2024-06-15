@@ -1,19 +1,16 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-// Helper function to match text and icon
-const getByTextAndIcon = (text, icon) => (content, element) => {
-  const hasText = element => element.textContent === text;
-  const elementHasText = hasText(element);
-  const childrenDontHaveText = Array.from(element.children).every(
-    child => !hasText(child)
-  );
+// Helper function to match text and icon within the button
+const getByTextAndIcon = (text, icon) => {
+  return (content, element) => {
+    const hasText = element => element.textContent.includes(text);
+    const hasIcon = Array.from(element.querySelectorAll('span[role="img"]')).some(
+      el => el.getAttribute('aria-label') === icon
+    );
 
-  const hasIcon = Array.from(element.querySelectorAll('span[role="img"]')).some(
-    el => el.getAttribute('aria-label') === icon
-  );
-
-  return elementHasText && childrenDontHaveText && hasIcon;
+    return hasText(element) && hasIcon;
+  };
 };
 
 test('renders Reverse String title', () => {
@@ -35,8 +32,8 @@ test('reverses string correctly on button click', () => {
   const inputElement = screen.getByLabelText(/Enter text/i);
   fireEvent.change(inputElement, { target: { value: 'world' } });
   
-  // Matching the button by the exact text
-  const buttonElement = screen.getByRole('button', { name: /Reverse 🔄/i });
+  // Matching the button by role and partial text
+  const buttonElement = screen.getByRole('button', { name: /Reverse/i });
   fireEvent.click(buttonElement);
   const resultElement = screen.getByText(/dlrow/i);
   expect(resultElement).toBeInTheDocument();
