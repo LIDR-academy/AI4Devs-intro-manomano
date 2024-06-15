@@ -24,6 +24,7 @@ const ResultLabel = ({ reversed }) => {
           <ContentCopyIcon 
             onClick={handleCopyClick}
             sx={{ cursor: 'pointer' }}
+            aria-label="Copy to clipboard"
           />
         </Tooltip>
       )}
