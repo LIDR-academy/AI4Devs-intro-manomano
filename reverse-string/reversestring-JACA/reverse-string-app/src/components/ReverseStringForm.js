@@ -19,8 +19,9 @@ const ReverseStringForm = ({ input, handleInputChange, handleReverseClick }) => 
       color="primary" 
       onClick={handleReverseClick}
       sx={{ ml: 2 }}
+      startIcon={<span role="img" aria-label="reverse">🔄</span>}
     >
-      Reverse 🔄
+      Reverse
     </Button>
   </Box>
 );
