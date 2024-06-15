@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 const ReverseStringForm = ({ input, handleInputChange, handleReverseClick }) => (
   <Box display="flex" alignItems="center">
     <TextField 
-      label="Enter text"
+      label="Reverse a string"
       variant="outlined"
       fullWidth
       value={input}

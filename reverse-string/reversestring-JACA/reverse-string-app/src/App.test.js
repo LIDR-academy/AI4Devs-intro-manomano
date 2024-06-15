@@ -21,7 +21,7 @@ test('renders Reverse String title', () => {
 
 test('reverses string correctly on input change', () => {
   render(<App />);
-  const inputElement = screen.getByLabelText(/Enter text/i);
+  const inputElement = screen.getByLabelText(/Reverse a string/i);
   fireEvent.change(inputElement, { target: { value: 'hello' } });
   const resultElement = screen.getByText(/olleh/i);
   expect(resultElement).toBeInTheDocument();
@@ -29,7 +29,7 @@ test('reverses string correctly on input change', () => {
 
 test('reverses string correctly on button click', () => {
   render(<App />);
-  const inputElement = screen.getByLabelText(/Enter text/i);
+  const inputElement = screen.getByLabelText(/Reverse a string/i);
   fireEvent.change(inputElement, { target: { value: 'world' } });
   
   // Matching the button by role and partial text
@@ -48,7 +48,7 @@ test('copies reversed string to clipboard', async () => {
   });
 
   render(<App />);
-  const inputElement = screen.getByLabelText(/Enter text/i);
+  const inputElement = screen.getByLabelText(/Reverse a string/i);
   fireEvent.change(inputElement, { target: { value: 'copy' } });
   
   const iconElement = screen.getByLabelText(/Copy to clipboard/i);
