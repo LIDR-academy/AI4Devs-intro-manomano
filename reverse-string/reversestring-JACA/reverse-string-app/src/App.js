@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Container from '@mui/material/Container';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import ReverseStringForm from './components/ReverseStringForm';
+import ResultLabel from './components/ResultLabel';
+import { reverseString } from './utils/stringUtils';
 
-function App() {
+const App = () => {
+  const [input, setInput] = useState("");
+  const [reversed, setReversed] = useState("");
+
+  const handleReverseClick = () => {
+    setReversed(reverseString(input));
+  };
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setInput(value);
+    setReversed(reverseString(value));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Reverse String
+        </Typography>
+        <ReverseStringForm 
+          input={input} 
+          handleInputChange={handleInputChange} 
+          handleReverseClick={handleReverseClick}
+        />
+        <ResultLabel reversed={reversed} />
+      </Box>
+    </Container>
   );
 }
 
