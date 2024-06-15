@@ -31,7 +31,7 @@ El código debe seguir las mejores prácticas de diseño y desarrollo de softwar
 El código ha dado el siguiente error en tiempo de ejecución "Can't resolve '@mui/icons-material/ContentCopy"
 ```
 
-Styling Error Prompt
+# Styling Error Prompt
 ```
 El emoji en el botón "Reverse" debe aparecer junto al texto y no debajo del texto.
 ```
