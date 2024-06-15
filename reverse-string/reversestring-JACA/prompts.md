@@ -1,4 +1,4 @@
-Initial Prompt
+# Initial Prompt
 ```
 Vas a actuar como un Senior Web Developer experto en las siguientes tecnologías frontend:
 - HTML
@@ -26,7 +26,7 @@ El código debe seguir las mejores prácticas de diseño y desarrollo de softwar
 - Documentación a nivel de código, funcionalidad y colaboración
 ```
 
-Execution Error Prompt
+# Execution Error Prompt
 ```
 El código ha dado el siguiente error en tiempo de ejecución "Can't resolve '@mui/icons-material/ContentCopy"
 ```
@@ -36,7 +36,7 @@ Styling Error Prompt
 El emoji en el botón "Reverse" debe aparecer junto al texto y no debajo del texto.
 ```
 
-Unit Testing Error Prompt
+# Unit Testing Error Prompt
 ```
 Las siguientes pruebas unitarias fallaron
 - reverses string correctly on button click con el error TestingLibraryElementError: Unable to find an element with the text: /Reverse 🔄/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
@@ -66,7 +66,7 @@ La siguiente prueba unitaria ha vuelto a fallar
     TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Reverse 🔄/i`
 ```
 
-Label improvement
+# Label improvement
 ```
 Cambia la label del input text de "Enter text" a "Reverse a string"
 ```
