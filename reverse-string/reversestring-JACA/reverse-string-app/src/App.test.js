@@ -35,14 +35,21 @@ test('reverses string correctly on button click', () => {
   const inputElement = screen.getByLabelText(/Enter text/i);
   fireEvent.change(inputElement, { target: { value: 'world' } });
   
-  // Using the helper function to match text and icon
-  const buttonElement = screen.getByRole('button', { name: getByTextAndIcon('Reverse', 'reverse') });
+  // Matching the button by the exact text
+  const buttonElement = screen.getByRole('button', { name: /Reverse 🔄/i });
   fireEvent.click(buttonElement);
   const resultElement = screen.getByText(/dlrow/i);
   expect(resultElement).toBeInTheDocument();
 });
 
 test('copies reversed string to clipboard', async () => {
+  // Mock the clipboard API
+  Object.assign(navigator, {
+    clipboard: {
+      writeText: jest.fn().mockImplementation(() => Promise.resolve()),
+    },
+  });
+
   render(<App />);
   const inputElement = screen.getByLabelText(/Enter text/i);
   fireEvent.change(inputElement, { target: { value: 'copy' } });
@@ -50,6 +57,5 @@ test('copies reversed string to clipboard', async () => {
   const iconElement = screen.getByLabelText(/Copy to clipboard/i);
   fireEvent.click(iconElement);
 
-  const clipboardText = await navigator.clipboard.readText();
-  expect(clipboardText).toBe('ypoc');
+  expect(navigator.clipboard.writeText).toHaveBeenCalledWith('ypoc');
 });
