@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse String</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <h1 class="text-2xl font-bold mb-4">Reverse string</h1>
+      <section class="mt-8">
+        <input
+          id="stringInput"
+          type="text"
+          placeholder="Hello, welcome to AI4Devs"
+          class="border border-gray-300 p-2 w-full rounded"
+        />
+        <span id="error" class="text-red-600 hidden"
+          >El campo no puede estar vacio</span
+        >
+      </section>
+      <button
+        id="reverseButton"
+        class="bg-blue-600 text-white px-4 py-2 mt-8 rounded flex items-center"
+      >
+        Reverse
+        <i class="fas fa-exchange-alt ml-2"></i>
+        <!-- Font Awesome reverse icon -->
+      </button>
+      <p id="result" class="mt-8 text-green-600 text-base"></p>
+      <button
+        id="copyButton"
+        class="bg-gray-500 text-white px-4 py-2 mt-8 rounded flex items-center"
+        disabled
+      >
+        Copy
+        <i class="far fa-copy ml-2"></i>
+        <!-- Font Awesome copy icon -->
+      </button>
+    </div>
+  </body>
+</html>

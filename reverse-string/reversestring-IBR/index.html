@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversed text</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        input {
+            margin-right: 5px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding-left: 5px;
+        }
+        .result {
+            font-weight: bold;
+            color: black;
+            margin-right: 5px;
+        }
+        .output {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<h1>Texto Invertido</h1>
+<div class="row">
+    <input type="text" id="inputText" placeholder="Introduce el texto">
+    <button id="reverseButton">Invertir texto</button>
+</div>
+<div class="row">
+    <span class="result">Texto invertido:</span>
+    <span class="output" id="reversedText"></span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
