@@ -1,3 +1,5 @@
+Chatbot used: ChatGPT
+
 Hi! I would like to create a simple page with HTML, CSS and JavaScript (last stable versions for each one) where I can introduce a text and the text is returned reversed in the same page without reloading. So, if I have the input AI4Devs, the value returned must be sveD4IA.
 
 For HTML, the language of the page must be in English, but we can write with any latin language in the form.
