@@ -1,0 +1,16 @@
+body {
+    background-color: #f3f4f6; /* Tailwind Gray-100 */
+}
+
+.text-center {
+    max-width: 500px;
+    margin: auto;
+}
+
+input {
+    transition: border-color 0.3s ease;
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
